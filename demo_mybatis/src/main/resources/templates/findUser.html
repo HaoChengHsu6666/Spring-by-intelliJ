@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FIND USER</title>
+</head>
+<body>
+    <div class = "container">
+        <h2>Find User</h2>
+        <form class="header" th:action="@{/showUser}" method="post" th:object="${User}">
+            <input type="text" id="input" placeholder="put your id..." th:field="*{id}">
+            <button type="submit" class="go">Go</button>
+        </form>
+    </div>
+</body>
+</html>

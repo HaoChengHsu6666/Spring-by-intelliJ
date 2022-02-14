@@ -1,0 +1,11 @@
+thymeleaf:
+  cache: false
+  prefix: classpath:/templates/    # 設定去templates資料夾找html檔案
+  suffix: .html
+  encoding: UTF-8
+  mode: HTML5
+
+spring:
+  messages:
+  fallback-to-system-locale: false # 找不到當前語言檔時，至系統默認index.properties
+  basename: static/lang/index # 將語言檔配置在static/lang底下，預設為index
