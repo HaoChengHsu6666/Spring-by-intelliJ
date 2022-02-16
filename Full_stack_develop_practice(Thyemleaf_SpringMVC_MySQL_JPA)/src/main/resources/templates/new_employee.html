@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+</head>
+
+<style>
+    body{
+        font-size:36px;
+    }
+    form {
+        border:1px solid #000;
+        font-family: "Lucida Fax";
+        font-size:24px;
+        width:600px;
+        border:1px solid #000;
+        text-align:center;
+        border-collapse:collapse;
+    }
+    input {
+        background-color: gold;
+        color: brown;
+        padding:2px;
+        border:1px solid #000;
+    }
+    button {
+        background-color: lightgreen;
+        border:1px solid #000;
+        padding:5px;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1>Employee Management System</h1>
+        <hr>
+        <h2> Save Employee</h2>
+
+        <form action="#" th:action="@{/saveEmployee}" th:object ="${employee}" method="post">
+            <input type="text" th:field="*{firstName}"
+                placeholder="Employee First Name" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{lastName}"
+                   placeholder="Employee last Name" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{email}"
+                   placeholder="Employee email" class="form-control mb-4 col-4">
+
+            <button type="submit" class="btn btn-info col-2"> save Employee</button>
+        </form>
+        <hr>
+
+        <a th:href="@{/}"> Back to Employee List </a>
+    </div>
+
+</body>
+</html>
